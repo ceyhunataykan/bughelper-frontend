@@ -15,7 +15,7 @@
     <AssemblyName>TestTheme</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
     <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -92,6 +92,10 @@
     <Content Include="Global.asax" />
     <Content Include="img\bug-logo.png" />
     <Content Include="vote\.gitignore" />
+    <Content Include="vote\dist\upvotejs\upvotejs.css" />
+    <Content Include="vote\dist\upvotejs\upvotejs.jquery.js" />
+    <Content Include="vote\dist\upvotejs\upvotejs.svg" />
+    <Content Include="vote\dist\upvotejs\upvotejs.vanilla.js" />
     <Content Include="vote\dist\upvote\upvote.css" />
     <Content Include="vote\dist\upvote\upvote.jquery.js" />
     <Content Include="vote\dist\upvote\upvote.svg" />
@@ -103,8 +107,14 @@
     <Content Include="vote\tests\create-jquery.js" />
     <Content Include="vote\tests\create-vanilla.js" />
     <Content Include="vote\tests\jquery.html" />
+    <Content Include="vote\tests\lib\common-tests.js" />
+    <Content Include="vote\tests\lib\setup.js" />
+    <Content Include="vote\tests\lib\utils.js" />
     <Content Include="vote\tests\qunit-2.8.0.css" />
     <Content Include="vote\tests\qunit-2.8.0.js" />
+    <Content Include="vote\tests\test.bootstrap.js" />
+    <Content Include="vote\tests\test.jquery.js" />
+    <Content Include="vote\tests\test.vanilla.js" />
     <Content Include="vote\tests\test1.js" />
     <Content Include="vote\tests\vanilla.html" />
     <Content Include="Web.config" />
@@ -112,6 +122,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ProfilController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,6 +139,13 @@
     <None Include="Properties\PublishProfiles\bug-helper - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\bug-helper - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\bug-helper - Web Deploy.pubxml" />
+    <Content Include="Views\Profil\Index.cshtml" />
+    <Content Include="Views\Profil\FotoGuncelle.cshtml" />
+    <Content Include="Views\Profil\ProfilDuzenle.cshtml" />
+    <Content Include="Views\Profil\EpostaDegistir.cshtml" />
+    <Content Include="Views\Profil\ParolaDegistir.cshtml" />
+    <Content Include="Views\Profil\TwoFactor.cshtml" />
+    <Content Include="Views\Profil\UyelikIptal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
