@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" action="" method=post oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Parolalar uyuşmuyor." : "")'>
                             <fieldset>
 
                                 <!-- Form Name -->
@@ -19,7 +19,8 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="passwordinput">Geçerli Parola</label>
                                     <div class="col-md-5">
-                                        <input id="passwordinput" name="passwordinput" type="password" placeholder="**********" class="form-control input-md" required="">
+                                        <input type="password" class="form-control" name="password" placeholder="Parola" required="required"
+                                               pattern="(?=.*\d)(?=.*[!#$%^&*_-])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="En az bir sayı, bir büyük ve küçük harf,bir özel karakter ve en az 8 veya daha fazla karakter içermelidir">
 
                                     </div>
                                 </div>
@@ -28,7 +29,8 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="passwordinput">Yeni Parola</label>
                                     <div class="col-md-5">
-                                        <input id="passwordinput" name="passwordinput" type="password" placeholder="**********" class="form-control input-md" required="">
+                                        <input type="password" class="form-control" name="password" placeholder="Parola" required="required"
+                                               pattern="(?=.*\d)(?=.*[!#$%^&*_-])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="En az bir sayı, bir büyük ve küçük harf,bir özel karakter ve en az 8 veya daha fazla karakter içermelidir">
 
                                     </div>
                                 </div>
@@ -37,7 +39,8 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="passwordinput">Yeni Parola Tekrar</label>
                                     <div class="col-md-5">
-                                        <input id="passwordinput" name="passwordinput" type="password" placeholder="**********" class="form-control input-md" required="">
+                                        <input type="password" class="form-control" name="confirmPassword" placeholder="Parola(Tekrar)" required="required"
+                                               pattern="(?=.*\d)(?=.*[!#$%^&*_-])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="En az bir sayı, bir büyük ve küçük harf,bir özel karakter ve en az 8 veya daha fazla karakter içermelidir">
 
                                     </div>
                                 </div>
@@ -45,10 +48,10 @@
                                 <!-- Button -->
                                 <div class="form-group text-center">
                                     <label class="col-md-4 control-label" for="singlebutton"></label>
-                                    <div class="col-md-2">
-                                        <a href="#" class="btn btn-success"> Değiştir</a>                                        
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-success btn-block signup-btn">Kayıt Ol</button>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-sm-2">
                                         <a href="/Profil/Index" class="btn btn-danger">Vazgeç</a>
                                     </div>
                                 </div>
