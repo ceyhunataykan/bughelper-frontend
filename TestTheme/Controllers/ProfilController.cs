@@ -27,7 +27,7 @@ namespace TestTheme.Controllers
         {
             try
             {
-                if (file.ContentLength > 0)
+                if (file != null && file.ContentLength > 0)
                 {
                     var _FileName = Path.GetFileName(file.FileName);
                     var _path = Path.Combine(Server.MapPath("~/UploadFiles"), _FileName);
@@ -51,19 +51,41 @@ namespace TestTheme.Controllers
         [HttpGet]
         public ActionResult EpostaDegistir()
         {
+
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult EpostaDegistir(EmailVal model)
         {
-            if (model.NewEmail == model.ConfirmEmail)
+            string mail = "abc@mail.com";
+
+            if(model.CurrentEmail == null || model.NewEmail == null || model.ConfirmEmail == null)
             {
-                ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Güncelleme Başarılı</div>";
+                ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\"> E-Posta alanları boş bırakılamaz...</div>";
+                
                 return View();
             }
-            ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">Hata Oluştu. Tekrar Deneyiniz.</div>";
-            return View();
+
+            if (model.CurrentEmail == mail)
+            {
+                if (model.NewEmail == model.ConfirmEmail)
+                {
+                    ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">E-Posta güncelleme başarılı...</div>";
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">E-Postalar uyuşmuyor...</div>";
+                    return View();
+                }
+            }
+            else
+            {
+                ViewBag.Message = "<div class=\"alert alert-danger\" role=\"alert\">Varsayılan E-Posta hatalı...</div>";
+                return View();
+            }
         }
         public ActionResult ParolaDegistir()
         {
