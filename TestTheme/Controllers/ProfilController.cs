@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TestTheme.Models;
 
 namespace TestTheme.Controllers
 {
@@ -33,12 +34,12 @@ namespace TestTheme.Controllers
                     file.SaveAs(_path);
                 }
 
-                ViewBag.Message = "File Uploaded Successfully!!";
+                ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Güncelleme Başarılı</div>";
                 return View();
             }
             catch
             {
-                ViewBag.Message = "File upload failed!!";
+                ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">Hata Oluştu. Tekrar Deneyiniz.</div>";
                 return View();
             }
         }
@@ -46,8 +47,22 @@ namespace TestTheme.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public ActionResult EpostaDegistir()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult EpostaDegistir(EmailVal model)
+        {
+            if (model.NewEmail == model.ConfirmEmail)
+            {
+                ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Güncelleme Başarılı</div>";
+                return View();
+            }
+            ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">Hata Oluştu. Tekrar Deneyiniz.</div>";
             return View();
         }
         public ActionResult ParolaDegistir()
