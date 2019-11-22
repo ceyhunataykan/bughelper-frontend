@@ -25,17 +25,33 @@ namespace TestTheme.Controllers
         [HttpPost]
         public ActionResult FotoGuncelle(HttpPostedFileBase file)
         {
+            string mesaj;
+            decimal DosyaBoyutu = 500;
             try
             {
-                if (file != null && file.ContentLength > 0)
+                var desteklenenTip = new[] { "jpg", "jpeg", "png" };
+                var fileExt = System.IO.Path.GetExtension(file.FileName).Substring(1);
+                if (!desteklenenTip.Contains(fileExt))
+                {
+                    ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">Geçersiz dosya formatı. Yükleyeceğiniz fotoğraf jpg veya png olmalıdır.</div>";
+                    return View();
+                }
+                 else if (file.ContentLength > (DosyaBoyutu * 1024))
+                {
+                    mesaj = "Dosya boyutu en fazla " + DosyaBoyutu + "KB olmalıdır!";
+                    ViewBag.Message = "<div class=\"alert alert-warning\" role=\"alert\">"+mesaj+"</div>";
+                    
+                    return View();
+                }
+                else
                 {
                     var _FileName = Path.GetFileName(file.FileName);
                     var _path = Path.Combine(Server.MapPath("~/UploadFiles"), _FileName);
                     file.SaveAs(_path);
-                }
 
-                ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Güncelleme Başarılı</div>";
-                return View();
+                    ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Yükleme başarılı</div>";
+                    return View();
+                }
             }
             catch
             {
