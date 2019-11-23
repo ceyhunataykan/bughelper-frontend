@@ -59,11 +59,17 @@ namespace TestTheme.Controllers
                 return View();
             }
         }
+        [HttpGet]
         public ActionResult ProfilDuzenle()
         {
             return View();
         }
-
+        [HttpPost]
+        public ActionResult ProfilDuzenle(ProfilGun model)
+        {
+            ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Profil güncelleme başarılı...</div>";
+            return View();
+        }
         [HttpGet]
         public ActionResult EpostaDegistir()
         {
