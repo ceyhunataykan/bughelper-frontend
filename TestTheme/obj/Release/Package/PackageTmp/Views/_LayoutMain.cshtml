@@ -4,7 +4,7 @@
     <title>@ViewBag.Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/css/bootstrap-social.css" rel="stylesheet" />
@@ -13,15 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="~/css/main.css" rel="stylesheet" />
-    <script type="text/javascript">
-        function confirmPass() {
-            var mail = document.getElementsByName("newemail").value
-            var confMail = document.getElementsByName("confirmemail").value
-            if (mail != confMail) {
-                alert('E-Postalar uyuşmuyor!');
-            }
-        }
-    </script>
 </head>
 <body>
     <nav class="navbar navbar-inverse" style="background-color:#202020;">
@@ -46,7 +37,7 @@
 
                 <form class="navbar-form navbar-right" id="navBarSearhForm" role="search">
                     <div class="form-group input-group">
-                        <input type="text" class="form-control" style="width:730px" placeholder="Soru Ara...">
+                        <input type="text" class="form-control navbar-search" placeholder="Soru Ara...">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
                                 <span class="glyphicon glyphicon-search"></span>

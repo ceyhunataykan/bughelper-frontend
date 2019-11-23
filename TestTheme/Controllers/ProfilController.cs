@@ -46,7 +46,7 @@ namespace TestTheme.Controllers
                 else
                 {
                     var _FileName = Path.GetFileName(file.FileName);
-                    var _path = Path.Combine(Server.MapPath("~/UploadFiles"), _FileName);
+                    var _path = Path.Combine(Server.MapPath("~/img"), _FileName);
                     file.SaveAs(_path);
 
                     ViewBag.Message = "<div class=\"alert alert-success\" role=\"alert\">Yükleme başarılı</div>";

@@ -13,11 +13,11 @@
                 <div class="col-sm-6">
                     @using (Html.BeginForm("EpostaDegistir", "Profil", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
                     {
+                        @Html.AntiForgeryToken()
                     <fieldset>
-                        <!-- Form Name -->
+
                         <legend>E-Posta Değiştir</legend>
 
-                        <!-- Password input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label">Geçerli E-Posta</label>
                             <div class="col-md-5">
@@ -25,7 +25,6 @@
                             </div>
                         </div>
 
-                        <!-- Password input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label">Yeni E-Posta</label>
                             <div class="col-md-5">
@@ -33,7 +32,6 @@
                             </div>
                         </div>
 
-                        <!-- Password input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label">Yeni E-Posta Tekrar</label>
                             <div class="col-md-5">
@@ -41,14 +39,11 @@
                             </div>
                         </div>
 
-                        <!-- Button -->
                         <div class="form-group text-center">
                             <label class="col-md-4 control-label" for="singlebutton"></label>
-                            <div class="col-sm-3">
-                                <button type="submit" class="btn btn-success btn-block signup-btn">Kayıt Ol</button>
-                            </div>
-                            <div class="col-sm-2">
-                                <a href="/Profil/Index" class="btn btn-danger">Vazgeç</a>
+                            <div class="col-md-5">
+                                <button type="submit" class="btn btn-success btn-block signup-btn">Güncelle</button>
+                                <a href="/Profil/Index" class="btn btn-danger btn-block">Vazgeç</a>
                             </div>
                         </div>
                         @Html.Raw(ViewBag.Message)
