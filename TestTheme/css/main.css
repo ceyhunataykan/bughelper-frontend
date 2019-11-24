@@ -128,6 +128,9 @@ hr.style1 {
 }
 
 @media only screen and (max-width: 768px) {
+    body{
+        font-size:10px;
+    }
     /* For mobile phones: */
     .navbar .navbar-form .form-group .navbar-search {
         width: 200px;

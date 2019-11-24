@@ -17,22 +17,22 @@
                             <legend class="text-left">Profil Fotoğrafı Güncelle</legend>
                             <div class="form-group">
                                 <div class="col-md-4"></div>
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <img src="https://www.w3schools.com/bootstrap/img_avatar3.png" class="img-circle" height="150" width="150" alt="Avatar">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="filebutton">Fotoğraf Seç</label>
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     @Html.TextBox("file", "", new { type = "file" })
                                 </div>
                             </div>
 
-                            <div class="form-group text-center">
+                            <div class="form-group">
                                 <label class="col-md-4 control-label" for="singlebutton"></label>
-                                <div class="col-md-4">
-                                    <input type="submit" class="btn btn-success btn-block" value="Yükle" /><br />
+                                <div class="col-md-5">
+                                    <input type="submit" class="btn btn-success btn-block" value="Yükle" />
                                     <a href="/Profil/Index" class="btn btn-danger btn-block">Vazgeç</a>
                                 </div>
                             </div>
