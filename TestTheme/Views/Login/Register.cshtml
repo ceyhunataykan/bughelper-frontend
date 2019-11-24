@@ -12,16 +12,22 @@
                     <form action="" class="login-form" method=post oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Parolalar uyuşmuyor." : "")'>
                         <div class="text-center">
                             <a href="/Default/Index">
-                                <img src="~/img/bugg.png" height="40" width="40" alt="BugHelper">
+                                <img src="~/img/bughelper-dark.png" height="40" alt="BugHelper">
                             </a>
                         </div>
-                        <div class="text-center social-btn">
-                            <a class="btn btn-block btn-social btn-google">
-                                <span class="fa fa-google"></span> Google ile Kayıt
-                            </a>
-                            <a class="btn btn-block btn-social btn-facebook">
-                                <span class="fa fa-facebook"></span> Facebook ile Kayıt
-                            </a>
+                        <div class="row" style="margin-bottom:-15px;">
+                            <div class="text-center social-btn" style="margin-top:15px;">
+                                <div class="col-sm-6">
+                                    <a class="btn btn-block btn-social btn-google">
+                                        <span class="fa fa-google"></span> Google
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a class="btn btn-block btn-social btn-facebook">
+                                        <span class="fa fa-facebook"></span> Facebook
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="or-seperator"><b>veya</b></div>
                         <div class="form-group">

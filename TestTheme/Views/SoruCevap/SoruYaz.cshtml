@@ -35,12 +35,14 @@
                 </div>
                 <div class="form-group text-left">
                     <label class="col-md-2 control-label" for="guncellebuton">Etiket :</label>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-12">
                         @Html.TextBoxFor(m => m.SoruEtiket, new { type = "text", @class = "form-control", @placeholder = "#java, #c++, #python" })
+                        <br />
                     </div>
                     <div class="col-md-3 text-right">
                         <button type="submit" class="btn btn-success"> Tamam</button>
                         <a href="/Default/Index" class="btn btn-danger"> Vazgeç</a>
+                        <br /><br /><br />
                     </div>
                 </div>
             </fieldset>

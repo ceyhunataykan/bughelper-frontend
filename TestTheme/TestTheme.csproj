@@ -241,9 +241,13 @@
     <Content Include="css\bootstrap-social.css" />
     <Content Include="css\main.css" />
     <Content Include="Global.asax" />
+    <Content Include="img\a1.png" />
     <Content Include="img\bg.jpg" />
     <Content Include="img\bug-logo.png" />
     <Content Include="img\bugg.png" />
+    <Content Include="img\bughelper-dark.png" />
+    <Content Include="img\bughelper.png" />
+    <Content Include="img\q1.png" />
     <Content Include="vote\.gitignore" />
     <Content Include="vote\dist\upvotejs\upvotejs.css" />
     <Content Include="vote\dist\upvotejs\upvotejs.jquery.js" />
