@@ -324,6 +324,7 @@
     <Content Include="Views\Login\ForgetPassword.cshtml" />
     <Content Include="Views\Login\ResetPassword.cshtml" />
     <Content Include="Views\SoruCevap\SoruYaz.cshtml" />
+    <Content Include="Views\Default\SoruDetay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

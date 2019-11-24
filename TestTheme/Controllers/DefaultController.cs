@@ -13,5 +13,9 @@ namespace TestTheme.Controllers
         {
             return View();
         }
+        public ActionResult SoruDetay()
+        {
+            return View();
+        }
     }
 }
