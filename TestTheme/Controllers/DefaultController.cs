@@ -13,6 +13,14 @@ namespace TestTheme.Controllers
         {
             return View();
         }
+        public ActionResult Hakkimizda()
+        {
+            return View();
+        }
+        public ActionResult Iletisim()
+        {
+            return View();
+        }
         public ActionResult SoruDetay()
         {
             return View();
