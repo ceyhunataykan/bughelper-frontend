@@ -5,7 +5,7 @@
     @model TestTheme.Models.Sorular
 }
 
-<div class="row">
+<div class="container">
         @using (Html.BeginForm("SoruYaz", "SoruCevap", FormMethod.Post, new { enctype = "multipart/form-data"}))
         {
             @Html.AntiForgeryToken()
@@ -43,6 +43,7 @@
                         <button type="submit" class="btn btn-success"> Tamam</button>
                         <a href="/Default/Index" class="btn btn-danger"> Vazgeç</a>
                         <br /><br /><br />
+                        @ViewBag.message
                     </div>
                 </div>
             </fieldset>

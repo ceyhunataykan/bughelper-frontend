@@ -247,6 +247,7 @@
     <Content Include="img\bugg.png" />
     <Content Include="img\bughelper-dark.png" />
     <Content Include="img\bughelper.png" />
+    <Content Include="img\code.png" />
     <Content Include="img\q1.png" />
     <Content Include="vote\.gitignore" />
     <Content Include="vote\dist\upvotejs\upvotejs.css" />

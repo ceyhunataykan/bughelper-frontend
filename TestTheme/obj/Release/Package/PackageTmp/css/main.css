@@ -15,7 +15,7 @@ body {
 }
 
 .form-control, .btn {
-    border-radius: 50px;
+    border-radius: 5px;
     outline: none !important;
 }
 .navbar .navbar-form .form-group .navbar-search {
@@ -101,13 +101,14 @@ body {
         z-index: 1;
     }
 footer {
-    position: fixed;
+
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #202020;
     color: whitesmoke;
     padding: 15px;
+    margin-top : 20px;
 }
 
 .social-btn .btn {
@@ -129,7 +130,7 @@ hr.style1 {
 
 @media only screen and (max-width: 768px) {
     body{
-        font-size:10px;
+        font-size:11px;
     }
     /* For mobile phones: */
     .navbar .navbar-form .form-group .navbar-search {
